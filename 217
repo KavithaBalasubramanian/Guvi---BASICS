@@ -1,0 +1,21 @@
+
+//Given numbers A,B find A^B.
+Input Size : 1 <= A <= 5 <= B <= 50
+
+
+
+const readline = require('readline');
+const inp = readline.createInterface({
+  input: process.stdin
+});
+
+const userInput = [];
+inp.on("line", (Data) => {
+    var inputData = Data.split(" ");
+    var n = parseInt(inputData[0]);
+    var m = parseInt(inputData[1]);
+    
+    var pow = n**m;
+    console.log(pow);
+   
+});
