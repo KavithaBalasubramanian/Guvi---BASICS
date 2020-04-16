@@ -1,0 +1,39 @@
+//Let P represent Paper, R represent Rock and S represent Scissors. Given 2 out of the 3 determine which one wins. If its a draw print 'D'.
+Sample Testcase :
+INPUT
+R P
+OUTPUT
+P
+
+
+
+const readline = require('readline');
+
+const inp = readline.createInterface({
+  input: process.stdin
+});
+
+//const userInput = [];
+
+inp.on("line", (Data) => {
+    var inputData = Data.split(" ");
+    var a = inputData[0];
+    var b = inputData[1];
+   if(a==="P" && b==="R" || a==="R" && b==="P")
+   {
+   console.log("P");
+   }
+   
+   else if (a==="S" && b==="R" || a==="R" && b==="S")
+   {
+       console.log("R");
+   }
+   
+   else if(a==="S" && b==="P" || a==="P" && b==="S")
+   {
+       console.log("S");
+   }
+   else 
+   console.log("D");
+
+});
