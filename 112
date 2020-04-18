@@ -1,0 +1,43 @@
+//Given a number N and an array of N elements, find the Bitwise OR of the array elements.
+Input Size : N <= 100000
+Sample Testcase :
+INPUT
+2
+2 4
+OUTPUT
+6
+
+
+
+
+const rl = require('readline');
+const ip = rl.createInterface({input:process.stdin, output:process.stdout});
+let a,b,c;
+let count = 0;
+ip.on('line', (data) => {
+  if (count === 0){
+    a = parseInt(data);
+    count++;
+  }
+  else if(count == 1){
+    b = data.split(" ").map(num => Number(num));
+     count++
+  }
+  else if(count == 1){
+    c = data.split(" ").map(num => Number(num));
+     count++
+  }
+  else {
+    return
+  }
+});
+
+
+ip.on('close', () => {
+    function checkBitwise(a,b,c){
+  return (a|b|c)
+
+}
+console.log(checkBitwise(a,b[0],b[1]))
+    
+    })
