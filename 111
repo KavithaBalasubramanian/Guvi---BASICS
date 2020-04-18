@@ -1,0 +1,49 @@
+//Given a number N and an array of N elements ,find the Bitwise AND of the array elements.
+Input Size N <= 100000
+Sample Testcase :
+INPUT
+4
+4 3 2 1
+OUTPUT
+0
+
+
+const rl = require('readline');
+const ip = rl.createInterface({input:process.stdin, output:process.stdout});
+let a,b,c;
+let count = 0;
+ip.on('line', (data) => {
+  if (count === 0){
+    a = parseInt(data);
+    count++;
+  }
+  else if(count == 1){
+    b = data.split(" ").map(num => Number(num));
+     count++
+  }
+  else if(count == 1){
+    c = data.split(" ").map(num => Number(num));
+     count++
+  }
+   else if(count == 1){
+    d = data.split(" ").map(num => Number(num));
+     count++
+  }
+   else if(count == 1){
+    e = data.split(" ").map(num => Number(num));
+     count++
+  }
+  else {
+    return
+  }
+});
+
+
+ip.on('close', () => {
+    function checkBitwise(a,b,c,d,e){
+  return a&b&c&d&e
+
+}
+console.log(checkBitwise(a,b[0],b[1],b[2],b[3]))
+    
+    })
