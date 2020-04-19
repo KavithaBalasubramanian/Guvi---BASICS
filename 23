@@ -1,0 +1,25 @@
+//Given a number N, print the product of the digits.
+
+
+
+const readline = require('readline');
+
+const inp = readline.createInterface({
+  input: process.stdin
+});
+
+const userInput = [];
+
+inp.on("line", (Data) => {
+    var inputData = Data;
+    var number =(inputData);
+     var pro=1;
+     var m;
+     while(number>0)
+     {
+         m=parseInt(number%10);
+         pro=pro*m;
+         number=parseInt(number/10);
+     }
+     console.log(pro)
+});
