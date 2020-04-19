@@ -1,0 +1,28 @@
+//Given a string S consisting of 2 words reverse the order of two words .
+
+
+
+const readline = require('readline');
+
+const inp = readline.createInterface({
+  input: process.stdin
+});
+
+//const userInput = [];
+
+inp.on("line", (Data) => {
+    var inputData = Data;
+    var a =(inputData);
+    
+    
+    var c = a.toString();
+     
+     let array = c.split(" ");
+     let first = array[0];
+let last = array[array.length - 1];
+array[0] = last;
+array[array.length - 1] = first;
+c = array.join(" ");
+
+console.log(c)
+});
