@@ -1,0 +1,32 @@
+//Assume your brother studies in class 2. He has to  complete his homework on co-primes. As an elder sibling help him in finding whether the given two numbers is co-prime or not.
+
+
+const readline = require('readline');
+
+const inp = readline.createInterface({
+  input: process.stdin
+});
+
+//const userInput = [];
+
+inp.on("line", (Data) => {
+   var inputData = Data.split(" ");
+    var n =parseInt(inputData[0]);
+    var m =parseInt(inputData[1]);
+    
+    for(i=1;i<=n;i++)
+	 {
+	  if(n%i===0 && m%i===0)
+	  {
+	  var hcf = i;
+	  }
+	 }
+	 if(hcf == 1)
+	 {
+	     console.log("1")
+	 }
+	 else
+	 {
+	     console.log("0")
+	 }
+});
